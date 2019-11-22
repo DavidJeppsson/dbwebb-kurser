@@ -5,7 +5,7 @@ views:
         region: flash
         template: anax/v2/image/default
         data:
-            src: "image/code.jpg?width=1100&height=180&crop-to-fit&area=10,10,10,5"
+            src: "image/code.jpg?width=1400&height=180&crop-to-fit&area=10,10,10,5"
 
     byline:
         region: main
