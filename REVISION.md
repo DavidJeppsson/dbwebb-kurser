@@ -1,5 +1,14 @@
 Revision history
 =========================
+
+v 3.0.0 (2019-11-29)
+-------------------------
+
+* Implemented vertical and horizontal grid.
+* Re-designed site.
+
+
+
 v 2.0.0 (2019-11-22)
 -------------------------
 

@@ -27,8 +27,6 @@ views:
 Om
 =========================
 
-Detta innehåll är skrivet i markdown och du hittar innehållet i filen `content/om.md`.
-
 Denna sida är en del av kursen Design, en kurs jag går via programmet Webbprogramering på distans vid Blekinge Tekniska Högskola.
 
 [FIGURE src=image/design.jpg?w=300 caption="En bild med verktyg för design."]

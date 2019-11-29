@@ -321,17 +321,6 @@ template {
 /**
  * Internal self contained modules, save in directory module/.
  */
-/*!
- * Stylesheet for design kmom01.
- *
- * This stylesheet is for the design course and kmom01. Fill it with style
- * to style up the website so it is useable.
- */
-/* Poor-mans normalize */
-/* Container */
-/* Header */
-/* Main */
-/* Footer */
 /**
  * Style for the stylechooser.
  */
@@ -5038,15 +5027,6 @@ p {
   clear: both;
 }
 /* Header */
-.region-header-col-1 {
-  float: left;
-  width: 30%;
-  margin-right: 10px;
-}
-.region-header-col-2 {
-  float: left;
-  width: 60%;
-}
 .site-logo {
   display: none;
 }
@@ -5081,13 +5061,11 @@ p {
   width: 20%;
 }
 .article {
-  background-color: #fff;
   padding: 20px;
   margin: 30px;
 }
 /* Byline */
 .author-byline {
-  background-color: #fff;
   border: 1px solid #ccc;
   padding: 1em;
   width: 450px;

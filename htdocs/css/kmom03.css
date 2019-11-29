@@ -1,7 +1,7 @@
 /*!
- * Stylesheet for design kmom02.
+ * Stylesheet for design kmom03.
  *
- * This stylesheet is for the design course and kmom02 where we use LESS.
+ * This stylesheet is for the design course and kmom03 where we use LESS.
  */
 /**
  * Import various mixins.
@@ -317,246 +317,6 @@ template {
  */
 [hidden] {
   display: none;
-}
-/**
- * Internal self contained modules, save in directory module/.
- */
-/**
- * Style for the stylechooser.
- */
-/**
- * Variables
- */
-/**
- * Style
- */
-/**
- * A responsive menu.
- */
-/**
- * Style for responsive menu
- */
-/**
- * Outer wrapper for menu
- */
-.rm-navbar {
-  position: relative;
-}
-.rm-navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-/**
- * Avoid scrolling mobile devices
- * OBSOLETE?
- */
-/**
- * Meny layout for the small buttonized menu.
- */
-.rm-small {
-  display: none;
-  float: right;
-}
-a.rm-button {
-  display: inline-block;
-  color: inherit;
-  background-color: transparent;
-  outline: none;
-}
-a.rm-button:active {
-  color: inherit;
-  background-color: transparent;
-}
-a.rm-button .rm-button-face-1 {
-  position: absolute;
-  transition: color 0.1s ease;
-}
-a.rm-button .rm-button-face-2 {
-  position: relative;
-  color: transparent;
-  transition: color 0.1s ease;
-}
-a.rm-button.rm-clicked {
-  color: #9FB129;
-  background-color: transparent;
-}
-a.rm-button.rm-clicked .rm-button-face-1 {
-  color: transparent;
-}
-a.rm-button.rm-clicked .rm-button-face-2 {
-  z-index: 2;
-  color: inherit;
-}
-/**
- * Standard meny layout, valid for any subtype.
- */
-.rm-default li {
-  display: inline-block;
-}
-.rm-default li li {
-  display: block;
-  min-width: 10em;
-}
-.rm-default a {
-  display: block;
-  text-decoration: none;
-  white-space: nowrap;
-  padding: 1em;
-  outline: none;
-}
-.rm-default ul {
-  position: absolute;
-  z-index: 9999;
-  left: -9999px;
-}
-.rm-default ul.rm-show-submenu {
-  left: 0;
-}
-.rm-default ul li {
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
-}
-.rm-default ul ul {
-  left: -9999px;
-}
-/**
- * Menu layout for the desktop variant, usually full width of browser.
- */
-.rm-desktop ul {
-  background-color: inherit;
-}
-.rm-desktop li {
-  position: relative;
-}
-.rm-desktop li a:hover,
-.rm-desktop li.current-menu-item a {
-  text-decoration: underline;
-}
-.rm-desktop li a {
-  color: inherit;
-  background-color: inherit;
-}
-.rm-desktop li a:hover {
-  color: inherit;
-  background-color: inherit;
-}
-.rm-desktop li:hover > ul {
-  left: 0;
-}
-.rm-desktop li:hover > ul.rm-submenu-level-1 {
-  left: auto;
-  left: 30%;
-}
-.rm-desktop li .rm-submenu-button {
-  display: none;
-}
-/**
- * Menu layout for the mobile variant, usually for mobile screens.
- */
-.rm-mobile {
-  width: 100%;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
-  background-color: #444;
-  color: #fff;
-}
-.rm-mobile a {
-  color: inherit;
-}
-.rm-mobile li {
-  display: block;
-  box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.4);
-  /*        // Header of submenu is closed
-        //&.sub-menu, // For WordPress menu generating
-        &.rm-submenu > a:before {
-            content: "\f0d7";
-        }
-
-        // Header of submenu is opened
-        &.rm-submenu-open > a:before {
-            content: "\f0d8";
-        }
-*/
-}
-.rm-mobile li.rm-submenu-open > ul {
-  position: relative;
-  left: 0;
-}
-/**
- * Menu layout for the max variant, for mobile screens and complete menues.
- * Swipe from right by default.
- */
-.rm-max.rm-navbar {
-  position: absolute;
-  top: 16px;
-  right: 24px;
-}
-.rm-max .rm-small {
-  display: block;
-}
-.rm-max .rm-small .rm-button {
-  color: inherit;
-}
-.rm-max .rm-small .rm-button.rm-clicked {
-  color: #9FB129;
-  position: fixed;
-  top: 16px;
-  right: 24px;
-  z-index: 999;
-}
-.rm-max .rm-mobile {
-  transition: all 0.15s linear;
-  position: fixed;
-  z-index: 998;
-  top: 0;
-  transform: translateX(100%);
-  width: 500px;
-  max-width: 500px;
-  height: 500px;
-  overflow-y: auto;
-  padding-top: 72px;
-  background-color: #131313;
-  /* Color when menu item is clicked */
-  /* Button for submenu */
-  /* Style for submenu */
-}
-.rm-max .rm-mobile li a:active {
-  background-color: transparent;
-}
-.rm-max .rm-mobile.rm-clicked {
-  transform: translateX(0);
-}
-.rm-max .rm-mobile a:hover {
-  text-decoration: underline;
-}
-.rm-max .rm-mobile .rm-submenu-button {
-  float: right;
-  box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.4);
-  background-color: #444;
-  padding: 8px 24px;
-  margin-right: 8px;
-  margin-top: 10px;
-  border-radius: 5px;
-  position: relative;
-  z-index: 1;
-}
-.rm-max .rm-mobile .rm-submenu-button:after {
-  content: "\25BC";
-}
-.rm-max .rm-mobile .rm-submenu-button:hover {
-  text-decoration: none;
-  background-color: #ccc;
-}
-.rm-max .rm-mobile li ul {
-  padding-left: 8px;
-}
-.rm-max .rm-mobile .rm-submenu-open > .rm-submenu-button:after {
-  content: "\25B2";
-}
-.rm-max.rm-swipe-left .rm-mobile {
-  left: 0;
-}
-.rm-max.rm-swipe-right .rm-mobile {
-  right: 0;
 }
 /**
  * Font Awesome.
@@ -4972,6 +4732,285 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   font-family: 'Font Awesome 5 Brands';
 }
 /**
+ * Internal self contained modules, save in directory module/.
+ */
+/**
+ * Style for the stylechooser.
+ */
+/**
+ * Variables
+ */
+/**
+ * Style
+ */
+/**
+ * A responsive menu.
+ */
+/**
+ * Style for responsive menu
+ */
+/**
+ * Outer wrapper for menu
+ */
+.rm-navbar {
+  position: relative;
+}
+.rm-navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/**
+ * Avoid scrolling mobile devices
+ * OBSOLETE?
+ */
+/**
+ * Meny layout for the small buttonized menu.
+ */
+.rm-small {
+  display: none;
+  float: right;
+}
+a.rm-button {
+  display: inline-block;
+  color: inherit;
+  background-color: transparent;
+  outline: none;
+}
+a.rm-button:active {
+  color: inherit;
+  background-color: transparent;
+}
+a.rm-button .rm-button-face-1 {
+  position: absolute;
+  transition: color 0.1s ease;
+}
+a.rm-button .rm-button-face-2 {
+  position: relative;
+  color: transparent;
+  transition: color 0.1s ease;
+}
+a.rm-button.rm-clicked {
+  color: #9FB129;
+  background-color: transparent;
+}
+a.rm-button.rm-clicked .rm-button-face-1 {
+  color: transparent;
+}
+a.rm-button.rm-clicked .rm-button-face-2 {
+  z-index: 2;
+  color: inherit;
+}
+/**
+ * Standard meny layout, valid for any subtype.
+ */
+.rm-default li {
+  display: inline-block;
+}
+.rm-default li li {
+  display: block;
+  min-width: 10em;
+}
+.rm-default a {
+  display: block;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 1em;
+  outline: none;
+}
+.rm-default ul {
+  position: absolute;
+  z-index: 9999;
+  left: -9999px;
+}
+.rm-default ul.rm-show-submenu {
+  left: 0;
+}
+.rm-default ul li {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
+}
+.rm-default ul ul {
+  left: -9999px;
+}
+/**
+ * Menu layout for the desktop variant, usually full width of browser.
+ */
+.rm-desktop ul {
+  background-color: inherit;
+}
+.rm-desktop li {
+  position: relative;
+}
+.rm-desktop li a:hover,
+.rm-desktop li.current-menu-item a {
+  text-decoration: underline;
+}
+.rm-desktop li a {
+  color: inherit;
+  background-color: inherit;
+}
+.rm-desktop li a:hover {
+  color: inherit;
+  background-color: inherit;
+}
+.rm-desktop li:hover > ul {
+  left: 0;
+}
+.rm-desktop li:hover > ul.rm-submenu-level-1 {
+  left: auto;
+  left: 30%;
+}
+.rm-desktop li .rm-submenu-button {
+  display: none;
+}
+/**
+ * Menu layout for the mobile variant, usually for mobile screens.
+ */
+.rm-mobile {
+  width: 100%;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+  background-color: #444;
+  color: #fff;
+}
+.rm-mobile a {
+  color: inherit;
+}
+.rm-mobile li {
+  display: block;
+  box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.4);
+  /*        // Header of submenu is closed
+        //&.sub-menu, // For WordPress menu generating
+        &.rm-submenu > a:before {
+            content: "\f0d7";
+        }
+
+        // Header of submenu is opened
+        &.rm-submenu-open > a:before {
+            content: "\f0d8";
+        }
+*/
+}
+.rm-mobile li.rm-submenu-open > ul {
+  position: relative;
+  left: 0;
+}
+/**
+ * Menu layout for the max variant, for mobile screens and complete menues.
+ * Swipe from right by default.
+ */
+.rm-max.rm-navbar {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+}
+.rm-max .rm-small {
+  display: block;
+}
+.rm-max .rm-small .rm-button {
+  color: inherit;
+}
+.rm-max .rm-small .rm-button.rm-clicked {
+  color: #9FB129;
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  z-index: 999;
+}
+.rm-max .rm-mobile {
+  transition: all 0.15s linear;
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  transform: translateX(100%);
+  width: 500px;
+  max-width: 500px;
+  height: 500px;
+  overflow-y: auto;
+  padding-top: 72px;
+  background-color: #131313;
+  /* Color when menu item is clicked */
+  /* Button for submenu */
+  /* Style for submenu */
+}
+.rm-max .rm-mobile li a:active {
+  background-color: transparent;
+}
+.rm-max .rm-mobile.rm-clicked {
+  transform: translateX(0);
+}
+.rm-max .rm-mobile a:hover {
+  text-decoration: underline;
+}
+.rm-max .rm-mobile .rm-submenu-button {
+  float: right;
+  box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.4);
+  background-color: #444;
+  padding: 8px 24px;
+  margin-right: 8px;
+  margin-top: 10px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+.rm-max .rm-mobile .rm-submenu-button:after {
+  content: "\25BC";
+}
+.rm-max .rm-mobile .rm-submenu-button:hover {
+  text-decoration: none;
+  background-color: #ccc;
+}
+.rm-max .rm-mobile li ul {
+  padding-left: 8px;
+}
+.rm-max .rm-mobile .rm-submenu-open > .rm-submenu-button:after {
+  content: "\25B2";
+}
+.rm-max.rm-swipe-left .rm-mobile {
+  left: 0;
+}
+.rm-max.rm-swipe-right .rm-mobile {
+  right: 0;
+}
+/**
+* Import the typographic grid.
+*/
+/**
+ * Typographic font families to choose from.
+ */
+/**
+ * Typographic defaults.
+ */
+#desinax-hgrid {
+  /**
+     * Mixins used when setting default fonts
+     */
+  /**
+     * Settings for headings H1-H6
+     */
+  /**
+     * Text elements
+     */
+  /**
+     * Display source code.
+     */
+  /**
+     * Lists
+     */
+  /**
+     * Tables. Because of the need for padding on TH and TD, the vertical rhythm
+     * on table cells has to be 1.5*@magic-number.
+     */
+  /**
+     * More typography elements
+     */
+  /**
+     * Enable all default typographic elements.
+     */
+}
+.hgrid .inner-wrap {
+  background-image: url("../img/magic-number-22px.png");
+}
+/**
  * Base style to affect HTML elements on a general scale.
  */
 /**
@@ -4986,170 +5025,594 @@ body {
   padding: 0;
   color: #333;
   background-color: #333;
-  font: 100.01%/1 serif;
+  font: 16px/1.375 "Slabo 27px", serif;
 }
 img {
   max-width: 100%;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab", serif;
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+h1 img,
+h2 img,
+h3 img,
+h4 img,
+h5 img,
+h6 img {
+  margin: 0;
+}
+h1 {
+  font-size: 2.375em;
+  line-height: 1.15789474;
+  font-weight: normal;
+  border-bottom: 1px solid #666;
+  margin-bottom: 21px;
+}
+h1 ~ h1,
+h1 ~ h2,
+h1 ~ h3,
+h1 ~ h4,
+h1 ~ h5,
+h1 ~ h6 {
+  margin-top: 44px;
+}
+h1 + h2 {
+  margin-top: 22px;
+}
+h2 {
+  font-size: 1.875em;
+  line-height: 1.46666667;
+  font-weight: normal;
+  margin-bottom: 21px;
+  border-bottom: 1px solid #CCC;
+}
+h2 + h3 {
+  margin-top: 22px;
+}
+h3 {
+  font-size: 1.75em;
+  line-height: 1.57142857;
+  font-weight: normal;
+  margin-bottom: 21px;
+  border-bottom: 1px solid #EEE;
+}
+h3 + h4 {
+  margin-top: 22px;
+}
+h4 {
+  font-size: 1.5em;
+  line-height: 1.83333333;
+  font-weight: normal;
+  margin-bottom: 21px;
+  border-bottom: 1px solid #EEE;
+}
+h4 + h5 {
+  margin-top: 22px;
+}
+h5 {
+  font-size: 1.25em;
+  line-height: 1.1;
+  margin-bottom: 21px;
+  border-bottom: 1px solid #EEE;
+}
+h5 + h6 {
+  margin-top: 22px;
+}
+h6 {
+  font-size: 1.25em;
+  line-height: 1.1;
+  margin-bottom: 21px;
+  border-bottom: 1px solid #EEE;
+}
 p {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
-/**
- * Layout style for general structure of header, navbar, main, footer
- * and other regions of the page including route specific styles.
- */
-/**
- * Layout style for general structure of header, navbar, main, footer
- * and other regions of the page including route specific styles.
- */
-/**
- * Variables
- */
-/**
- * General layout
- */
-.wrap-all {
-  background-color: #fff;
-  max-width: 1400px;
-  margin: 0 auto;
+small,
+.small,
+.smaller {
+  font-size: 0.875em;
 }
-.outer-wrap {
-  width: 100%;
-  overflow: auto;
+strong,
+b {
+  font-weight: bold;
 }
-.inner-wrap {
-  width: 80%;
-  margin: 0 auto;
+mark {
+  color: #000;
+  background-color: #ff9;
 }
-.row ::after {
-  overflow: auto;
-  clear: both;
+abbr[title],
+dfn[title] {
+  text-decoration: dotted underline;
 }
-/* Header */
-.site-logo {
-  display: none;
+em,
+i,
+dfn {
+  font-style: italic;
 }
-/* Main and sidebars layout */
-.figure.figure.right {
-  float: right;
+sub,
+sup {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
-.region-main,
-.region-sidebar-left,
-.region-sidebar-right {
-  overflow: auto;
+sup {
+  top: -0.5em;
 }
-.region-main {
-  width: 70%;
-  margin-left: 10%;
-  float: left;
-  overflow: auto;
+sub {
+  bottom: -0.25em;
 }
-.region-main.has-sidebar {
+blockquote {
+  border-left: 4px solid #eee;
+  padding-left: 1em;
   margin-left: 0;
+  margin-bottom: 22px;
 }
-.region-main.has-sidebar-left.has-sidebar-right {
-  width: 60%;
+pre,
+code,
+kbd,
+samp,
+.code {
+  font-family: "monospace";
 }
-.region-sidebar-left,
-.region-sidebar-right {
-  width: 30%;
-  float: left;
-}
-.region-sidebar-left.has-sidebar-right,
-.region-sidebar-right.has-sidebar-left {
-  width: 20%;
-}
-.article {
-  padding: 20px;
-  margin: 30px;
-}
-/* Byline */
-.author-byline {
+code,
+samp {
   border: 1px solid #ccc;
-  padding: 1em;
-  width: 450px;
-  height: 140px;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+code {
+  background-color: #eee;
+}
+pre,
+div.code,
+pre code {
+  font-size: 1em;
+  line-height: 1.5;
+  white-space: pre;
+}
+pre {
+  margin-bottom: 22px;
+}
+pre code {
+  display: block;
+  overflow: auto;
+}
+div.code,
+pre code {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 21px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 0.5em;
+  background-color: #eee;
+}
+ul,
+ol {
+  margin-bottom: 22px;
+  padding-left: 1.5em;
+}
+ul p,
+ol p {
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin: 0;
+}
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: decimal;
+}
+dl {
+  margin-bottom: 22px;
+}
+dl.horizontal dt {
+  clear: left;
   float: left;
+  width: 7em;
 }
-.figure.left {
-  float: left;
-  margin-right: 10px;
+dl.horizontal dd {
+  margin-left: 8em;
+  display: block;
 }
-.figure.figure.figcaption {
-  padding-top: 10px;
-  display: table-caption;
-  caption-side: bottom;
+dd {
+  margin-left: 1.5em;
 }
-/* Footer */
-.outer-wrap-footer {
-  padding-top: 20px;
-  padding-bottom: 45px;
+article table,
+.table,
+.table1,
+.table2 {
+  margin-bottom: 22px;
 }
-.inner-wrap-footer {
-  padding: 30px 0;
-  margin-right: auto;
-  margin-left: auto;
+table.full-width,
+article .table,
+.table,
+.table2 {
+  width: 100%;
+}
+article table,
+.table,
+.table2 {
+  border-collapse: collapse;
+  /*
+            tfoot {
+            }
+            */
+}
+article table caption,
+.table caption,
+.table2 caption {
+  font-size: 0.875em;
+  line-height: 1.57142857;
+  text-align: left;
+  font-style: italic;
+}
+article table thead,
+.table thead,
+.table2 thead {
+  box-shadow: 0 1px 0 #aaa;
+}
+article table th,
+.table th,
+.table2 th {
+  vertical-align: bottom;
+  font-weight: bold;
+  text-align: left;
+}
+article table th,
+.table th,
+.table2 th,
+article table td,
+.table td,
+.table2 td {
+  padding: 5.5px;
+}
+article table tr,
+.table tr,
+.table2 tr {
+  box-shadow: 0 1px 0 #ccc;
+}
+article table tr:hover,
+.table tr:hover,
+.table2 tr:hover {
+  color: #000;
+  background-color: #f6f6f6;
+  box-shadow: 0 1px 0 #666;
+}
+table.striped tbody tr:nth-child(even) td,
+table.striped tbody tr.even td {
+  background-color: #fafafa;
+}
+hr {
+  position: relative;
+  top: -2px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  margin-top: 32px;
+  margin-bottom: 33px;
+}
+hr::after {
+  content: "§";
+  position: relative;
+  top: -0.7em;
+  left: 50%;
+  padding: 0 0.25em;
+  background-color: #fff;
 }
 /**
- * Layout style for general structure of header, navbar, main, footer
- * and other regions of the page including route specific styles.
+ * Import the vertical grid.
  */
 /**
- * Variables
+ * Fluid and Responsive Vertical Grid
  */
 /**
-  * Header layout
+ * Namespace what could be namespaced
+ */
+#desinax-vgrid {
+  /**
+     * Wrap grid in a container.
+     */
+  /**
+     * Show grid.
+     */
+  /**
+     * All columns must be wrapped in a row.
+     */
+  /**
+     * Create a column spanning @col columns.
+     */
+  /**
+     * Push a column @offset columns.
+     */
+  /**
+     * Pull a column left @offset columns.
+     */
+  /**
+     * Pull a column right @offset columns.
+     */
+}
+/**
+ * Layout using vgrid.
+ */
+/**
+  * Variables
   */
-.outer-wrap-header {
-  background-color: #d3fbdb;
+/**
+  * General layout
+  */
+.row {
+  display: block;
+  width: 101.04166667%;
+  margin-left: -0.52083333%;
+  margin-right: -0.52083333%;
 }
-.outer-wrap-header::after {
+.row::after {
   content: "";
   display: block;
   clear: both;
 }
-.inner-wrap-header {
-  max-width: 100%;
+.wrap-all {
+  background-color: #fff;
 }
-.region-header-col-1,
-.region-header-col-3 {
-  width: 20%;
-  float: left;
-}
-.region-header-col-2 {
-  width: 60%;
-  float: left;
-  text-align: center;
-}
-/**
- * Footer layout
- */
-.outer-wrap-footer {
-  color: #fff;
-  background-color: #333;
-  padding-top: 25px;
-  padding-bottom: 50px;
-}
-.inner-wrap-footer {
-  color: #fff;
-  background-color: #333;
+.inner-wrap {
   margin-right: auto;
   margin-left: auto;
   max-width: 1100px;
 }
-.region-footer {
-  float: left;
-  width: 98%;
-  margin-left: 1%;
-  margin-right: 1%;
+.inner-wrap-header {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  background-color: #d3fbdb;
 }
-.region-footer > .block {
-  padding-top: 3px;
-  width: 100%;
+.vgrid .inner-wrap {
+  background: url("../img/grid_24x30x10-nomargin.png") repeat-y scroll center center;
+  background-size: 100% auto;
+}
+@media (min-width: 1100px) {
+  .vgrid .inner-wrap {
+    background-size: 1100px auto;
+  }
+}
+.vgrid .inner-wrap.inner-wrap-header {
+  background: url("../img/grid_24x30x10-nomargin.png") repeat-y scroll center center;
+  background-size: 100% auto;
+}
+@media (min-width: 100%) {
+  .vgrid .inner-wrap.inner-wrap-header {
+    background-size: 100% auto;
+  }
+}
+/* Header layout */
+.site-logo {
+  display: none;
+}
+.outer-wrap-header {
+  background-color: #919;
+}
+.region-header-col-1,
+.region-header-col-3 {
+  display: inline;
+  float: left;
+  width: 19.79166667%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+  margin-bottom: 2px;
+}
+.region-header-col-2 {
+  display: inline;
+  float: left;
+  width: 57.29166667%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
   text-align: center;
+  margin-bottom: 2px;
+}
+.region-flash {
+  display: inline;
+  float: left;
+  width: 98.95833333%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+  margin-bottom: 2px;
+}
+.region-breadcrumb {
+  display: inline;
+  float: left;
+  width: 98.95833333%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+  margin-bottom: 2px;
+}
+/* Navigation */
+.next {
+  float: right;
+}
+.previous {
   float: left;
 }
+/* Main and sidebars layout */
+.region-main {
+  display: inline;
+  float: left;
+  width: 73.95833333%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+  margin-left: 13.02083333%;
+  margin-bottom: 3px;
+}
+.region-main.has-sidebar {
+  margin-left: 0.52083333%;
+  margin-bottom: 3px;
+}
+.region-main.has-sidebar-right {
+  display: inline;
+  float: left;
+  width: 69.79166667%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+}
+.region-main.has-sidebar-left.has-sidebar-right {
+  display: inline;
+  float: left;
+  width: 57.29166667%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+  margin-bottom: 3px;
+}
+.region-sidebar-left,
+.region-sidebar-right {
+  display: inline;
+  float: left;
+  width: 23.95833333%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+  margin-bottom: 3px;
+}
+.region-sidebar-right {
+  margin-left: 4.6875%;
+  margin-bottom: 3px;
+}
+.region-sidebar-left.has-sidebar-right,
+.region-sidebar-right.has-sidebar-left {
+  display: inline;
+  float: left;
+  width: 19.79166667%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+  margin-bottom: 3px;
+}
+.article {
+  display: inline;
+  float: left;
+  width: 98.95833333%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+}
+.figure.figure.right {
+  float: right;
+}
+/**
+* Responsive 1, 2, 3
+*/
+@media screen and (max-width: 1000px) {
+  .region-main {
+    display: inline;
+    float: left;
+    width: 98.95833333%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-bottom: 2px;
+  }
+  .region-main.has-sidebar-left.has-sidebar-right {
+    display: inline;
+    float: left;
+    width: 98.95833333%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-bottom: 2px;
+  }
+  .region-sidebar-left {
+    display: inline;
+    float: left;
+    width: 98.95833333%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-bottom: 2px;
+  }
+  .region-sidebar-left.has-sidebar-right,
+  .region-sidebar-right.has-sidebar-left {
+    display: inline;
+    float: left;
+    width: 98.95833333%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-bottom: 2px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .region-main.has-sidebar-right {
+    display: inline;
+    float: left;
+    width: 98.95833333%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-bottom: 2px;
+  }
+  .region-sidebar-right {
+    display: inline;
+    float: left;
+    width: 98.95833333%;
+    margin-right: 0.52083333%;
+    margin-left: 0.52083333%;
+    margin-bottom: 2px;
+  }
+  .region-flash {
+    display: none;
+  }
+}
+/* Byline */
+.author-byline {
+  display: inline;
+  float: left;
+  width: 65.625%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.figure.left {
+  float: left;
+}
+.figure.figure.figcaption {
+  display: table-caption;
+  caption-side: bottom;
+}
+/* Footer layout */
+.region-footer {
+  margin-bottom: 4;
+}
+.footer-column {
+  display: inline;
+  float: left;
+  width: 32.29166667%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+}
+.site-footer {
+  display: inline;
+  float: left;
+  width: 98.95833333%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+}
+.outer-wrap-footer,
+.inner-wrap-footer {
+  color: #fff;
+  background-color: #41561f;
+}
+.site-footer {
+  text-align: center;
+}
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
 /**
  * Layout for responsive style through media queries.
  */
@@ -5215,3 +5678,17 @@ p {
 /**
  * My own settings, not currently in their own module.
  */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v10/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmb2Rm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Slabo 27px';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Slabo 27px'), local('Slabo27px-Regular'), url(https://fonts.gstatic.com/s/slabo27px/v6/mFT0WbgBwKPR_Z4hGN2qgx8D0A.ttf) format('truetype');
+}
