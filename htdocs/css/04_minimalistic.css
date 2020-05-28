@@ -1,5 +1,5 @@
 /*!
- * Stylesheet for design kmom03.
+ * Stylesheet for design kmom04.
  *
  * This stylesheet is for the design course and kmom03 where we use LESS.
  */
@@ -5023,9 +5023,9 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: #333;
-  background-color: #333;
-  font: 16px/1.375 "Slabo 27px", serif;
+  color: #000;
+  background-color: #fff;
+  font: 16px/1.375 "Open Sans", sans-serif;
 }
 img {
   max-width: 100%;
@@ -5036,7 +5036,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto Slab", serif;
+  font-family: "Work Sans", sans-serif;
   margin-top: 22px;
   margin-bottom: 22px;
 }
@@ -5378,7 +5378,8 @@ hr::after {
   margin-right: auto;
   margin-left: auto;
   max-width: 100%;
-  background-color: #d3fbdb;
+  background-color: #A8A8A8;
+  color: #000;
 }
 .vgrid .inner-wrap {
   background: url("../img/grid_24x30x10-nomargin.png") repeat-y scroll center center;
@@ -5573,8 +5574,11 @@ hr::after {
   width: 65.625%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
-  border: 1px solid #ccc;
+  color: #000;
+  border: 1px solid #E6E6E6;
   background-color: #fff;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .figure.left {
   float: left;
@@ -5604,7 +5608,7 @@ hr::after {
 .outer-wrap-footer,
 .inner-wrap-footer {
   color: #fff;
-  background-color: #41561f;
+  background-color: #575757;
 }
 .site-footer {
   text-align: center;
@@ -5614,81 +5618,22 @@ hr::after {
  * and other regions of the page including route specific styles.
  */
 /**
- * Layout for responsive style through media queries.
- */
-@media screen and (max-width: 1500px) {
-  .site-logo {
-    display: none;
-  }
-}
-/**
- * Navbar
- */
-@media screen and (max-width: 960px) {
-  .rm-desktop a {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-}
-@media screen and (max-width: 800px) {
-  .region-header-col-1,
-  .region-header-col-3 {
-    width: 15%;
-  }
-  .region-header-col-2 {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 700px) {
-  .rm-desktop {
-    display: none;
-  }
-}
-/**
- * Show off the regions used in the website, to ease styling.
- */
-.regions .outer-wrap {
-  background-color: #f4e3c9;
-  border: 1px solid #e3b774;
-}
-.regions .inner-wrap {
-  background-color: #f4e0e9;
-  border: 1px solid #d995b4;
-}
-.regions .region-header-col-1,
-.regions .region-header-col-2,
-.regions .region-header-col-3,
-.regions .region-flash,
-.regions .region-breadcrumb,
-.regions .region-flash-message,
-.regions .region-columns-above,
-.regions .region-main,
-.regions .region-after-main,
-.regions .region-columns-below,
-.regions .region-sidebar-left,
-.regions .region-sidebar-right,
-.regions .region-footer,
-.regions .region-footer-column-1,
-.regions .region-footer-column-2,
-.regions .region-footer-column-3 {
-  background-color: #b5dce1;
-  border: 1px solid #6cbac4;
-  color: #111;
-}
-/**
- * My own settings, not currently in their own module.
+ * Importing minimalistic color-scheme.
  */
 @font-face {
-  font-family: 'Roboto Slab';
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/robotoslab/v11/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmb2Rm.ttf) format('truetype');
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-U1Ug.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Slabo 27px';
+  font-family: 'Work Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Slabo 27px'), local('Slabo27px-Regular'), url(https://fonts.gstatic.com/s/slabo27px/v6/mFT0WbgBwKPR_Z4hGN2qgx8D0A.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/worksans/v7/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K0nXNig.ttf) format('truetype');
+}
+.region-flash {
+  display: none;
 }

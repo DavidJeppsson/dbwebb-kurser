@@ -1,6 +1,13 @@
 Revision history
 =========================
 
+v 4.0.0 (2020-05-28)
+---------------------
+
+* Implemented tre new themes, and restructured some style.
+* Added a report on color schemes on websites.
+
+
 v 3.0.0 (2019-11-29)
 -------------------------
 

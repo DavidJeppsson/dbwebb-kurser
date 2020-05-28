@@ -14,7 +14,7 @@
     #desinax-vgrid.row();
 
     // background-color: #0f0;
-    //margin-bottom: 12px;
+    // margin-bottom: 12px;
 }
 
   .wrap-all {
@@ -34,7 +34,8 @@
 
 .inner-wrap-header {
     #desinax-vgrid.grid(100%);
-    background-color: #d3fbdb;
+    background-color: @bgColorNav;
+    color: @textColorNav;
 }
 
 .vgrid .inner-wrap {
@@ -215,8 +216,11 @@
 
 .author-byline {
     #desinax-vgrid.column(@columns * 2 / 3);
-    border: 1px solid #ccc;
-    background-color: #fff;
+    color: @textAutorBylien;
+    border: 1px solid @borderAutorByline;
+    background-color: @bgAutorByline;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .figure.left {
@@ -247,8 +251,8 @@
 
 .outer-wrap-footer,
 .inner-wrap-footer {
-    color: #fff;
-    background-color: #41561f;
+    color: @textFooter;
+    background-color: @bgFooter;
 }
 
 .site-footer {
